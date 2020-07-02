@@ -3,6 +3,7 @@
 版本：V1.0
 网站：[https://www.cnblogs.com/chaotalk/p/13197318.html)
 
+![avatar](https://user-gold-cdn.xitu.io/2020/6/27/172f347e153fb9e9?w=621&h=601&f=png&s=38722)
 #####二叉树，自然就是每个节点最多有两个分支，即两个子节点的一种树，两个分支分别称为左子树和右子树。还是那上面那张图举例，图一、图二和图四都是二叉树，因为它们每个节点都最多含有两个子节点。其中，图一又称为满二叉树，图四又称为完全二叉树。而之所以出现完全二叉树的概念，其实是基于二叉树的物理存储方式。
 ####二叉树的存储方法
 ######基于链表的链式存储法
@@ -30,13 +31,15 @@ public void preOrder(Node root){
 public void inOrder(Node root){
 	if(root==null) return;
 	inOrder(root.left);
-	Systrm.out.println(root.data);
+	System.out.println(root.data);
 	inOrder(root.right);
 }
 ###后序遍历
-public void inOrder(Node root){
+public void poOrder(Node root){
 	if(root==null) return;
 	inOrder(root.left)
 	inOrder(root.right);
-	Systrm.out.println(root.data);
+	System.out.println(root.data);
 }
+
+#####二叉树遍历的时间复杂度是O(n),这是因为每个节点最多会被访问两次，（递归时函数进栈和出栈），所以遍历操作的访问次数跟节点的个数 n 成正比，也就是说二叉树遍历的时间复杂度是 O(n)。
